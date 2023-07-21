@@ -1,3 +1,4 @@
+import { MyContextProvider } from "@/contexts/my-context";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -16,7 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className={inter.className}>{children}</body>
+      <MyContextProvider>
+        <body className={inter.className}>{children}</body>
+      </MyContextProvider>
     </html>
   );
 }

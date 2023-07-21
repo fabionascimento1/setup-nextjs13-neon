@@ -1,3 +1,4 @@
+import TesteContext from "@/components/Test";
 import { db } from "@/db";
 import { users } from "@/db/schema";
 import { revalidatePath } from "next/cache";
@@ -28,6 +29,9 @@ export default async function Home() {
         <input type="text" name="numerPhone" />
         <button type="submit">Enviar</button>
       </form>
+      <div>
+        <TesteContext />
+      </div>
     </>
   );
 }
