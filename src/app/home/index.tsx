@@ -1,3 +1,5 @@
+import { H1HTML } from "@/html-components/H1";
+
 export default function Home() {
-  return <h1>Home</h1>;
+  return <H1HTML text="bem vindo" />;
 }
