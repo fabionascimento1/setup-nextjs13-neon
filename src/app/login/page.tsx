@@ -1,4 +1,5 @@
 import TesteContext from "@/components/Test";
+import SectionAuto from "@/components/Test/SectionAuto/SectionAuto";
 import { db } from "@/db";
 import { users } from "@/db/schema";
 import { revalidatePath } from "next/cache";
@@ -22,7 +23,7 @@ export default async function Login() {
   }
 
   return (
-    <>
+    <SectionAuto>
       {JSON.stringify(allUsers, null, 2)}
       <form action={addUser}>
         <input type="text" name="fullName" />
@@ -32,6 +33,6 @@ export default async function Login() {
       <div>
         <TesteContext />
       </div>
-    </>
+    </SectionAuto>
   );
 }
